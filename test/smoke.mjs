@@ -35,7 +35,7 @@ globalThis.window = {
 
 await import(pathToFileURL(join(here, '..', 'lib', 'client.js')).href)
 assert.ok(loaded, 'bundle did not call __ModuleLoader__.load')
-assert.equal(loaded.id, 'dsh-model-tabs')
+assert.equal(loaded.id, '@lycorisradiatax/dsh-model-tabs')
 
 const mod = loaded.factory(localRequire)
 assert.equal(typeof mod.apply, 'function', 'apply export missing')

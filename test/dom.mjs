@@ -157,7 +157,7 @@ let rows = [...document.querySelectorAll('[role="option"]')]
 assert.deepEqual(rows.map((r) => r.textContent.replace('✓', '')), ['DeepSeek Chat', 'DeepSeek Reasoner'])
 
 // Tabs and lists keep their separate scroll containers.
-const styleText = document.getElementById('dsh-model-tabs/style').textContent
+const styleText = document.getElementById('@lycorisradiatax/dsh-model-tabs/style').textContent
 assert.match(styleText, /\.dmt-list\{[^}]*overflow-y:auto/)
 assert.match(styleText, /\.dmt-tabs\{[^}]*overflow-x:auto/)
 assert.ok(panel.style.maxHeight.endsWith('px'), 'panel gets its height budget inline')

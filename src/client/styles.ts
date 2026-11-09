@@ -4,7 +4,7 @@
  * namespaced with `dmt-`. System colors (Canvas/CanvasText/Highlight) follow the
  * page's color-scheme, so the same sheet works in light and dark themes.
  */
-export const STYLE_ID = 'dsh-model-tabs/style'
+export const STYLE_ID = '@lycorisradiatax/dsh-model-tabs/style'
 
 export const CSS: string = `
 .dmt-trigger{display:inline-flex;align-items:center;gap:6px;max-width:300px;margin:0;border:0;background:transparent;color:inherit;font:inherit;font-size:12px;line-height:1.2;padding:4px 6px;border-radius:8px;cursor:pointer;opacity:.92}

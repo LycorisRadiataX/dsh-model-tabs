@@ -3,4 +3,4 @@
 # declaration and served by the client module system.
 - insert:
     - id: model-tabs
-      name: dsh-model-tabs
+      name: '@lycorisradiatax/dsh-model-tabs'

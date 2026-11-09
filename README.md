@@ -1,5 +1,9 @@
 # dsh-model-tabs
 
+> npm 包名：`@lycorisradiatax/dsh-model-tabs`
+>
+> 仓库名仍是 `dsh-model-tabs`；安装时使用上面的 scoped 包名。
+
 把 DSH Web GUI 输入框下方的模型控件换成 **按 provider 分页（tab）+ 跨渠道搜索 + 推理强度**
 的弹窗。每个 tab 一个渠道、列表各自独立滚动；触发按钮显示 `provider · model · effort`。
 
@@ -37,7 +41,7 @@
 npm ci            # 按 package-lock.json 安装，跨机器可复现
 npm run typecheck
 npm test          # build + 离线冒烟 + jsdom 交互
-npm pack          # 生成 dsh-model-tabs-0.2.0.tgz（prepack 会先构建）
+npm pack          # 生成 lycorisradiatax-dsh-model-tabs-0.2.0.tgz（prepack 会先构建）
 ```
 
 构建产物：
@@ -53,7 +57,11 @@ npm pack          # 生成 dsh-model-tabs-0.2.0.tgz（prepack 会先构建）
 `dsh` 在 PATH 上时：
 
 ```bash
-dsh plugin --profile <profile> add ./dsh-model-tabs-0.2.0.tgz
+# 已发布到 npm 后
+dsh plugin --profile <profile> add @lycorisradiatax/dsh-model-tabs
+
+# 或安装本地 tgz
+dsh plugin --profile <profile> add ./lycorisradiatax-dsh-model-tabs-0.2.0.tgz
 dsh --profile <profile> --dump-config | grep model-tabs
 dsh --profile <profile>
 ```
@@ -66,7 +74,7 @@ dsh --profile <profile>
 装进桌面版使用的 profile（通常是 `desktop`）后需要重启 App。卸载：
 
 ```bash
-dsh plugin --profile <profile> remove dsh-model-tabs
+dsh plugin --profile <profile> remove @lycorisradiatax/dsh-model-tabs
 ```
 
 ## 项目结构
@@ -133,7 +141,7 @@ badge 等类型全部来自官方声明。
 
 ```js
 window.__ModuleLoader__.load({
-  id: 'dsh-model-tabs',
+  id: '@lycorisradiatax/dsh-model-tabs',
   factory: (require) => {
     var module = { exports: {} };
     var exports = module.exports;
